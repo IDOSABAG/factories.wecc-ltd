@@ -15,7 +15,7 @@ export default function ProductsInProgress() {
     },
     {
       image: "/images/product3.png",
-      category: "אגרוטק (חקלאות)"
+      category: "אגרוטק"
     },
     {
       image: "/images/product4.jpg",
@@ -23,27 +23,27 @@ export default function ProductsInProgress() {
     },
     {
       image: "/images/product5.jpg",
-      category: "חיות מחמד"
+      category: "מוצרי חיות מחמד"
     },
     {
       image: "/images/product6.jpg",
-      category: "ביקור במפעל"
+      category: "ציוד תעשייתי"
     },
     {
       image: "/images/product7.jpg",
-      category: "רפואי"
+      category: "ציוד רפואי"
     },
     {
       image: "/images/product8.jpeg",
-      category: "לוגיסטיקה"
+      category: "פתרונות לוגיסטיקה"
     },
     {
       image: "/images/product9.jpg",
-      category: "תעשייה"
+      category: "ציוד תעשייתי"
     },
     {
       image: "/images/product10.jpeg",
-      category: "ירוק"
+      category: "מוצרים ירוקים"
     },
     {
       image: "/images/product11.jpg",
@@ -51,35 +51,35 @@ export default function ProductsInProgress() {
     },
     {
       image: "/images/product12.jpg",
-      category: "נר חכם"
+      category: "תאורה חכמה"
     },
     {
       image: "/images/product13.jpg",
-      category: "מפעל ייצור"
+      category: "מכונות ייצור"
     },
     {
       image: "/images/product14.jpg",
-      category: "קו ייצור"
+      category: "אוטומציה"
     },
     {
       image: "/images/product15.jpg",
-      category: "רכיבי מוצר"
+      category: "רכיבים מכניים"
     },
     {
       image: "/images/product16.jpg",
-      category: "מוצר בפיתוח"
+      category: "אלקטרוניקה"
     },
     {
       image: "/images/product17.jpg",
-      category: "מערכת מים"
+      category: "מערכות מים"
     },
     {
       image: "/images/product18.jpg",
-      category: "רכיבי ייצור"
+      category: "רכיבי פלסטיק"
     },
     {
       image: "/images/product19.jpg",
-      category: "מכשיר חשמלי"
+      category: "מכשירי חשמל"
     },
     {
       image: "/images/product20.jpg",
@@ -87,15 +87,15 @@ export default function ProductsInProgress() {
     },
     {
       image: "/images/product21.jpg",
-      category: "מפעל הרכבה"
+      category: "מוצרי צריכה"
     },
     {
       image: "/images/product22.jpg",
-      category: "צוות המפעל"
+      category: "ציוד משרדי"
     },
     {
       image: "/images/product23.jpg",
-      category: "בדיקת איכות"
+      category: "מערכות בקרה"
     }
   ];
 

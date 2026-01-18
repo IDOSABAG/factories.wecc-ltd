@@ -39,7 +39,7 @@ export default function VideoSection() {
           </motion.div>
 
           {/* Videos Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {videos.map((video, index) => (
               <motion.div
                 key={index}
@@ -47,14 +47,14 @@ export default function VideoSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
-                className="relative"
+                className="relative flex justify-center"
               >
-                <div className="bg-gradient-to-br from-[#FDB913] to-[#f5a623] p-1 rounded-2xl shadow-2xl">
+                <div className="bg-gradient-to-br from-[#FDB913] to-[#f5a623] p-1 rounded-2xl shadow-2xl w-full max-w-[280px]">
                   <div className="bg-[#0a0e27] rounded-[0.9rem] overflow-hidden">
                     {/* Video embed - 9:16 ratio for YouTube Shorts */}
-                    <div className="relative w-full" style={{ paddingBottom: '177.78%', maxWidth: '320px', margin: '0 auto' }}>
+                    <div className="relative w-full aspect-[9/16]">
                       <iframe
-                        className="absolute top-0 left-0 w-full h-full rounded-xl"
+                        className="absolute top-0 left-0 w-full h-full"
                         src={`https://www.youtube.com/embed/${video.id}`}
                         title={video.title}
                         frameBorder="0"
@@ -66,13 +66,9 @@ export default function VideoSection() {
                 </div>
 
                 {/* Video title */}
-                <p className="text-center text-gray-300 mt-4 font-medium">
+                <p className="absolute -bottom-8 left-0 right-0 text-center text-gray-300 font-medium">
                   {video.title}
                 </p>
-
-                {/* Decorative elements */}
-                <div className="absolute -top-2 -right-2 w-16 h-16 bg-[#FDB913] rounded-full blur-2xl opacity-20" />
-                <div className="absolute -bottom-2 -left-2 w-20 h-20 bg-[#FDB913] rounded-full blur-2xl opacity-20" />
               </motion.div>
             ))}
           </div>

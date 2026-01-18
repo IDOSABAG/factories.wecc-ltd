@@ -39,19 +39,12 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      host: '0.0.0.0', // Bind to all interfaces for container access
+      host: 'localhost',
       port: 5173,
       strictPort: true,
-      // Allow all hosts - essential for Modal tunnel URLs
-      allowedHosts: true,
-      watch: {
-        // Enable polling for better file change detection in containers
-        usePolling: true,
-        interval: 100, // Check every 100ms for responsive HMR
-      },
       hmr: {
-        protocol: 'wss',
-        clientPort: 443
+        host: 'localhost',
+        port: 5173
       }
     },
     resolve: {
