@@ -35,21 +35,28 @@ export default function ContactForm() {
         // Continue even if database save fails
       }
 
-      // Send to Make.com webhook
-      await fetch("https://hook.eu2.make.com/w5x1tau9x3tki1t18jxu8j9yaj6cjy4q", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          full_name: formData.full_name,
-          phone: formData.phone,
-          email: formData.email,
-          product_description: formData.product_description,
-          stage: formData.stage,
-          consent: formData.consent
+      // Send to Make.com webhooks
+      const webhookData = {
+        full_name: formData.full_name,
+        phone: formData.phone,
+        email: formData.email,
+        product_description: formData.product_description,
+        stage: formData.stage,
+        consent: formData.consent
+      };
+
+      await Promise.all([
+        fetch("https://hook.eu2.make.com/w5x1tau9x3tki1t18jxu8j9yaj6cjy4q", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(webhookData)
+        }),
+        fetch("https://hook.eu2.make.com/uv5y9id4vn2ruq86kvjf5k7i3ry2z3ns", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(webhookData)
         })
-      });
+      ]);
 
       setIsSuccess(true);
       setFormData({
