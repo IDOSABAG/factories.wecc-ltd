@@ -7,95 +7,118 @@ export default function ProductsInProgress() {
   const products = [
     {
       image: "/images/product1.jpg",
-      category: "טכנולוגיה"
+      category: "טכנולוגיה",
+      showBadge: true
     },
     {
       image: "/images/product2.png",
-      category: "אלקטרוניקה"
+      category: "אלקטרוניקה",
+      showBadge: true
     },
     {
       image: "/images/product3.png",
-      category: "אגרוטק"
+      category: "אגרוטק",
+      showBadge: true
     },
     {
       image: "/images/product4.jpg",
-      category: "ניקיון והיגיינה"
+      category: "ניקיון והיגיינה",
+      showBadge: true
     },
     {
       image: "/images/product5.jpg",
-      category: "מוצרי חיות מחמד"
+      category: "מכשור מדעי",
+      showBadge: true
     },
     {
       image: "/images/product6.jpg",
-      category: "ציוד תעשייתי"
+      category: "ציוד תעשייתי",
+      showBadge: true
     },
     {
       image: "/images/product7.jpg",
-      category: "ציוד רפואי"
+      category: "ציוד רפואי",
+      showBadge: true
     },
     {
       image: "/images/product8.jpeg",
-      category: "פתרונות לוגיסטיקה"
+      category: "פתרונות לוגיסטיקה",
+      showBadge: true
     },
     {
       image: "/images/product9.jpg",
-      category: "ציוד תעשייתי"
+      category: "ציוד תעשייתי",
+      showBadge: true
     },
     {
       image: "/images/product10.jpeg",
-      category: "מוצרים ירוקים"
+      category: "מוצרים ירוקים",
+      showBadge: true
     },
     {
       image: "/images/product11.jpg",
-      category: "מוצר משקאות חכם"
+      category: "מוצר משקאות חכם",
+      showBadge: true
     },
     {
       image: "/images/product12.jpg",
-      category: "תאורה חכמה"
+      category: "תאורה חכמה",
+      showBadge: true
     },
     {
       image: "/images/product13.jpg",
-      category: "מכונות ייצור"
+      category: "מכונות ייצור",
+      showBadge: false
     },
     {
       image: "/images/product14.jpg",
-      category: "אוטומציה"
+      category: "אוטומציה",
+      showBadge: false
     },
     {
       image: "/images/product15.jpg",
-      category: "רכיבים מכניים"
+      category: "רכיבים מכניים",
+      showBadge: true
     },
     {
       image: "/images/product16.jpg",
-      category: "אלקטרוניקה"
+      category: "אלקטרוניקה",
+      showBadge: true
     },
     {
       image: "/images/product17.jpg",
-      category: "מערכות מים"
+      category: "מערכות מים",
+      showBadge: true
     },
     {
       image: "/images/product18.jpg",
-      category: "רכיבי פלסטיק"
+      category: "רכיבי פלסטיק",
+      showBadge: true
     },
     {
       image: "/images/product19.jpg",
-      category: "מכשירי חשמל"
+      category: "מכשירי חשמל",
+      showBadge: true
     },
     {
       image: "/images/product20.jpg",
-      category: "רכיבי מתכת"
+      category: "רכיבי מתכת",
+      showBadge: false
     },
     {
       image: "/images/product21.jpg",
-      category: "מוצרי צריכה"
+      category: "מוצרי צריכה",
+      showBadge: false
     },
     {
       image: "/images/product22.jpg",
-      category: "ציוד משרדי"
+      category: "ציוד משרדי",
+      showBadge: false
     },
     {
       image: "/images/product23.jpg",
-      category: "מערכות בקרה"
+      category: "מערכות בקרה",
+      showBadge: true
     }
   ];
 
@@ -151,9 +174,11 @@ export default function ProductsInProgress() {
                   </div>
 
                   {/* Badge */}
-                  <div className="absolute top-3 right-3 bg-[#FDB913]/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-[#0a0e27] font-bold text-xs">בפיתוח</span>
-                  </div>
+                  {product.showBadge && (
+                    <div className="absolute top-3 right-3 bg-[#FDB913]/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                      <span className="text-[#0a0e27] font-bold text-xs">בפיתוח</span>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
