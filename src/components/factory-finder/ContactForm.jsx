@@ -35,14 +35,15 @@ export default function ContactForm() {
         // Continue even if database save fails
       }
 
-      // Send to Make.com webhooks
+      // Send to webhooks
       const webhookData = {
         full_name: formData.full_name,
         phone: formData.phone,
         email: formData.email,
         product_description: formData.product_description,
         stage: formData.stage,
-        consent: formData.consent
+        consent: formData.consent,
+        source: "factory-finder"
       };
 
       await Promise.all([
