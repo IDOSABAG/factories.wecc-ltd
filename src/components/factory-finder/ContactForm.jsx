@@ -48,7 +48,7 @@ export default function ContactForm() {
       await Promise.all([
         fetch("https://hooks.zapier.com/hooks/catch/7280045/3wqg2fv", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          mode: "no-cors",
           body: JSON.stringify(webhookData)
         }),
         fetch("https://hook.eu2.make.com/uv5y9id4vn2ruq86kvjf5k7i3ry2z3ns", {
