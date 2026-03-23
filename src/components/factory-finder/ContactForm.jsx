@@ -56,6 +56,11 @@ export default function ContactForm() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(webhookData)
+        }),
+        fetch("https://hook.eu2.make.com/2sk7x3vuexl9vfctyvmnfzo8qgej2xir", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(webhookData)
         })
       ]);
 
